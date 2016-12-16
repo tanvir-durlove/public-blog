@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Open Blog</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Hello Writes</string>
+    <string name="slide_1_desc">Welcome To Open Blog</string>
+
+    <string name="slide_2_title">Write Anything!</string>
+    <string name="slide_2_desc">You can write anything you want</string>
+
+    <string name="slide_3_title">Note youre thoughts</string>
+    <string name="slide_3_desc">Write youre thoughts and let them know people</string>
+
+    <string name="slide_4_title">Discover!!!</string>
+    <string name="slide_4_desc">Discover others though, Compaire with yours</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+</resources>

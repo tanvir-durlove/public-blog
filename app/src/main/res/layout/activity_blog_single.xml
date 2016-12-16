@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_blog_single"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="tds.apps.publicblog.BlogSingleActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@mipmap/add_btn"
+                android:id="@+id/singlepostimage"
+                android:layout_height="300dp"
+                android:layout_width="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_below="@+id/singlepostimage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:id="@+id/singleposttitle"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#000"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_below="@+id/singleposttitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:id="@+id/singlepostdesc"
+                android:textSize="20dp"
+                android:textColor="#000"/>
+
+            <Button
+                android:text="Remove Post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/singleRemoveBtn"
+                android:ems="10"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="0sp"
+                android:layout_below="@+id/singlepostdesc"
+                android:layout_marginTop="30dp"
+                android:background="@color/bg_screen1"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

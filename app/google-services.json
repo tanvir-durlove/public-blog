@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "937273802100",
+    "firebase_url": "https://public-blog-5a45e.firebaseio.com",
+    "project_id": "public-blog-5a45e",
+    "storage_bucket": "public-blog-5a45e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937273802100:android:0187dcd0eec29a33",
+        "android_client_info": {
+          "package_name": "tds.apps.publicblog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "937273802100-d5qtbsdicl13vv4rag5h42do365odmg1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAjPpmTrmmQOrHDrlNWFByisVdRaTD3S0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "937273802100-d5qtbsdicl13vv4rag5h42do365odmg1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
