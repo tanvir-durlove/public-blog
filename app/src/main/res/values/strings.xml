@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Open Blog</string>
+    <string name="app_name">Find My Home</string>
     <string name="title_activity_welcome">Home Screen</string>
     <string name="next">NEXT</string>
     <string name="skip">SKIP</string>

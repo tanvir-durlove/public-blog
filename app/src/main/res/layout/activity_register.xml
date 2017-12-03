@@ -4,64 +4,90 @@
     android:id="@+id/activity_register"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="tds.apps.publicblog.RegisterActivity">
 
-    <ScrollView
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="24dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/account" />
+
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:paddingTop="60dp"
+        android:gravity="bottom"
+        android:id="@+id/relativeLayout">
+
+        <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/nameField"
-                android:hint="You're Name....." />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:layout_below="@+id/emailField"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-                android:id="@+id/passwordField"
-                android:hint="Type Password" />
+                <EditText
+                    android:id="@+id/nameField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:ems="10"
+                    android:textColor="#000"
+                    android:textColorHint="#000"
+                    android:backgroundTint="#000"
+                    android:hint="You're Name....."
+                    android:inputType="textPersonName" />
 
-            <Button
-                android:text="Sign Up"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/passwordField"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="69dp"
-                android:background="#3F51B5"
-                android:id="@+id/registerBtn" />
+                <EditText
+                    android:id="@+id/passwordField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/emailField"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:textColor="#000"
+                    android:textColorHint="#000"
+                    android:backgroundTint="#000"
+                    android:hint="Type Password" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:ems="10"
-                android:layout_marginTop="20dp"
-                android:id="@+id/emailField"
-                android:layout_below="@+id/nameField"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:hint="You're Emal....." />
+                <Button
+                    android:id="@+id/registerBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/passwordField"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="69dp"
+                    android:background="#3F51B5"
+                    android:text="Sign Up"
+                    android:layout_margin="20dp" />
 
-        </RelativeLayout>
-    </ScrollView>
+                <EditText
+                    android:id="@+id/emailField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/nameField"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:textColor="#000"
+                    android:textColorHint="#000"
+                    android:backgroundTint="#000"
+                    android:hint="You're Email....."
+                    android:inputType="textEmailAddress" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
 
 
 </RelativeLayout>

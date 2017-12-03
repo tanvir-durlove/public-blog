@@ -4,74 +4,92 @@
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/bg_screen2"
     tools:context="tds.apps.publicblog.LoginActivity">
 
-    <ScrollView
+    <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <RelativeLayout
+        android:layout_height="wrap_content"
+        android:src="@drawable/home"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:gravity="bottom">
+
+        <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:ems="10"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="46dp"
-                android:id="@+id/loginEmailField"
-                android:hint="Email" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:layout_below="@+id/loginEmailField"
-                android:layout_alignRight="@+id/loginEmailField"
-                android:layout_alignEnd="@+id/loginEmailField"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="20dp"
-                android:id="@+id/loginPasswordField"
-                android:hint="Password" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/loginBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/loginPasswordField"
-                android:layout_marginTop="38dp"
-                android:background="#3F51B5"
-                android:text="Log In"
-                android:textSize="20dp" />
+                <EditText
+                    android:id="@+id/loginEmailField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="46dp"
+                    android:ems="10"
+                    android:hint="Email"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    android:backgroundTint="#fff"
+                    android:inputType="textEmailAddress" />
 
-            <com.google.android.gms.common.SignInButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/googleBtn"
-                android:layout_below="@+id/loginBtn"
-                tools:layout_marginTop="30dp"
-                android:visibility="gone"/>
+                <EditText
+                    android:id="@+id/loginPasswordField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/loginEmailField"
+                    android:layout_alignRight="@+id/loginEmailField"
+                    android:layout_below="@+id/loginEmailField"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="30dp"
+                    android:ems="10"
+                    android:hint="Password"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    android:backgroundTint="#fff"
+                    android:inputType="textPassword" />
 
-            <Button
-                android:text="Nedd a New Account"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
-                android:background="#F17E74"
-                android:layout_below="@+id/googleBtn"
-                android:id="@+id/needNewAccount" />
-        </RelativeLayout>
-    </ScrollView>
+                <Button
+                    android:id="@+id/loginBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/loginPasswordField"
+                    android:layout_marginTop="38dp"
+                    android:background="#3F51B5"
+                    android:text="Log In"
+                    android:textSize="20dp" />
 
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/googleBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/loginBtn"
+                    android:visibility="gone"
+                    tools:layout_marginTop="30dp" />
 
+                <Button
+                    android:id="@+id/needNewAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/googleBtn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:background="#F17E74"
+                    android:text="Need a New Account" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
 </RelativeLayout>

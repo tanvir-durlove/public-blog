@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -34,6 +35,9 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+
+
         mEmailField = (EditText) findViewById(R.id.emailField);
         mNameField = (EditText) findViewById(R.id.nameField);
         mPasswordField = (EditText) findViewById(R.id.passwordField);
@@ -59,7 +63,7 @@ public class RegisterActivity extends AppCompatActivity {
         String email = mEmailField.getText().toString().trim();
         String password = mPasswordField.getText().toString().trim();
 
-        if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)||
+        if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)&&
                 password.length()>5){
 
             mProgress.setMessage("Signing up");
@@ -90,10 +94,11 @@ public class RegisterActivity extends AppCompatActivity {
 
         }
         else {
-            mPasswordField.setHint("You must have x characters in your password");
-            mEmailField.setHint("You must have to fill email");
-            mNameField.setHint("You must have to fill Name");
             mProgress.dismiss();
+            mPasswordField.setText("You must have 6 characters in your password");
+            mEmailField.setText("You must have to fill email");
+            mNameField.setText("You must have to fill Name");
+
 
         }
 
