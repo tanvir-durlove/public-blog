@@ -41,23 +41,24 @@
                 android:hint="Password" />
 
             <Button
-                android:text="Log In"
+                android:id="@+id/loginBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
                 android:layout_below="@+id/loginPasswordField"
-                android:textSize="20dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="38dp"
                 android:background="#3F51B5"
-                android:id="@+id/loginBtn" />
+                android:text="Log In"
+                android:textSize="20dp" />
 
             <com.google.android.gms.common.SignInButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/googleBtn"
                 android:layout_below="@+id/loginBtn"
-                tools:layout_marginTop="30dp" />
+                tools:layout_marginTop="30dp"
+                android:visibility="gone"/>
 
             <Button
                 android:text="Nedd a New Account"

@@ -105,8 +105,6 @@ public class MainActivity extends AppCompatActivity {
                         viewHolder.setDesc(model.getDesc());
                         viewHolder.setUsername(model.getUsername());
                         viewHolder.setImage(getApplicationContext(), model.getImage());
-                        //viewHolder.setUsername(model.getUsername());
-                        //viewHolder.setLikeBtn(post_key);
 
                         viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -138,13 +136,6 @@ public class MainActivity extends AppCompatActivity {
         public BlogViewHolder(View itemView) {
             super(itemView);
             mView = itemView;
-
-//            mLikeBtn = (ImageButton)mView.findViewById (R.id.like);
-//            mDatabaseLike = FirebaseDatabase.getInstance().getReference().child("Likes");
-//            mAuth = FirebaseAuth.getInstance();
-//
-//            mDatabaseLike.keepSynced(true);
-
 
         }
 
