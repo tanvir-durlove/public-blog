@@ -127,18 +127,12 @@ public class PostActivity extends AppCompatActivity {
 
                     final DatabaseReference newPost = mDatabase.push();
 
-//                            newPost.child("title").setValue(title_val);
-//                            newPost.child("desc").setValue(desc_val);
-//                            newPost.child("image").setValue(downloadUri.toString());
-
-
-
                     mDatabaseUser.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
 
                             newPost.child("title").setValue(title_val);
-                            newPost.child("value").setValue(desc_val);
+                            newPost.child("desc").setValue(desc_val);
                             newPost.child("image").setValue(downloadUri.toString());
                             newPost.child("uid").setValue(mCurrentUser.getUid());
                             newPost.child("Username").setValue(dataSnapshot.child("name").getValue()).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -178,8 +172,10 @@ public class PostActivity extends AppCompatActivity {
 
         else {
 
-            Toast.makeText(PostActivity.this, "Something went wrong. Please fill every field",
+            Toast.makeText(PostActivity.this, "Please fill every field",
                     Toast.LENGTH_SHORT).show();
+
+            mProgress.dismiss();
 
         }
 

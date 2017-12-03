@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/post_title"
-            android:text="Post Title goes here"
+            android:hint="Post Title goes here"
             android:padding="15dp"
             android:textSize="16dp"
             android:textStyle="bold" />
@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/post_desc"
-            android:text="Post Description Goes Here"
+            android:hint="Post Description Goes Here"
             android:padding="15dp" />
 
         <TextView
@@ -38,20 +38,15 @@
             android:paddingBottom="15dp"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:hint="username" />
+            android:hint="username"
+            android:visibility="gone"/>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!--<ImageButton-->
-                <!--android:layout_width="30dp"-->
-                <!--android:layout_height="30dp"-->
-                <!--android:id="@+id/like"-->
-                <!--app:srcCompat="@drawable/ic_thumb_up_black_24dp"-->
-                <!--android:background="#00ffffff"-->
-                <!--android:layout_margin="10dp" />-->
+
         </LinearLayout>
     </LinearLayout>
 

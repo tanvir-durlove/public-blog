@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -58,7 +59,8 @@ public class RegisterActivity extends AppCompatActivity {
         String email = mEmailField.getText().toString().trim();
         String password = mPasswordField.getText().toString().trim();
 
-        if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)){
+        if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)||
+                password.length()>5){
 
             mProgress.setMessage("Signing up");
             mProgress.show();
@@ -85,6 +87,13 @@ public class RegisterActivity extends AppCompatActivity {
 
                 }
             });
+
+        }
+        else {
+            mPasswordField.setHint("You must have x characters in your password");
+            mEmailField.setHint("You must have to fill email");
+            mNameField.setHint("You must have to fill Name");
+            mProgress.dismiss();
 
         }
 
